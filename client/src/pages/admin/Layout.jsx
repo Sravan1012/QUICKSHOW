@@ -4,14 +4,16 @@ import AdminSidebar from "../../components/admin/AdminSidebar";
 import { Outlet } from "react-router-dom";
 import { useAppContext } from "../../context/AppContext.jsx";
 import Loading from "../../components/Loading.jsx";
-
 const Layout = () => {
-  const { isAdmin, fetchIsAdmin } = useAppContext();
+  const { isAdmin, loadingAdmin, fetchIsAdmin } = useAppContext();
 
   useEffect(() => {
     fetchIsAdmin();
   }, []);
-  return true ? (
+
+  if (loadingAdmin) return <Loading />; // show spinner while fetching
+
+  return isAdmin ? (
     <>
       <AdminNavbar />
       <div className="flex">
@@ -22,7 +24,9 @@ const Layout = () => {
       </div>
     </>
   ) : (
-    <Loading />
+    <div className="text-center mt-20 text-xl text-red-500">
+      You are not authorized to access this page
+    </div>
   );
 };
 

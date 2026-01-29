@@ -33,6 +33,12 @@ export const stripeWebhooks = async (request, response) => {
           paymentLink: "",
         });
 
+        // Send confirmation email
+        await inngest.send({
+          name: "app/show.booked",
+          data: { bookingId },
+        });
+
         break;
       }
 

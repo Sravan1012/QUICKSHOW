@@ -10,6 +10,7 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [loadingAdmin, setLoadingAdmin] = useState(true);
   const [shows, setShows] = useState([]);
   const [favouriteMovies, setFavouriteMovies] = useState([]);
 
@@ -25,15 +26,12 @@ export const AppProvider = ({ children }) => {
       const { data } = await axios.get("/api/admin/is-admin", {
         headers: { Authorization: `Bearer ${await getToken()}` },
       });
-      setIsAdmin(data.isAdmin);
 
-      if (!data.isAdmin && location.pathname.startsWith("/admin")) {
-        navigate("/");
-        toast.error("You are not authorized to access admin dashboard");
-      }
+      setIsAdmin(data.isAdmin);
     } catch (error) {
-      console.error(error);
       setIsAdmin(false);
+    } finally {
+      setLoadingAdmin(false); // signal that fetch is done
     }
   };
 
@@ -82,6 +80,7 @@ export const AppProvider = ({ children }) => {
     getToken,
     navigate,
     isAdmin,
+    loadingAdmin,
     shows,
     favouriteMovies,
     fetchFavouriteMovies,
