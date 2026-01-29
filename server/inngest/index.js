@@ -6,6 +6,7 @@ import sendEmail from "../configs/nodeMailer.js";
 
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "movie-ticket-booking" });
+const image_base_url = process.env.VITE_TMDB_IMAGE_BASE_URL || "";
 
 // Inngest function to save user data to a database
 const syncUserCreation = inngest.createFunction(
