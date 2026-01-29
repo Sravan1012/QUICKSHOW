@@ -40,6 +40,8 @@ export const stripeWebhooks = async (request, response) => {
           data: { bookingId },
         });
 
+        response.json({ received: true });
+
         break;
       }
 
