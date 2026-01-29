@@ -61,33 +61,41 @@ const releaseSeatsAndDeleteBooking = inngest.createFunction(
   async ({ event, step }) => {
     const bookingId = event.data.bookingId;
 
-    // Check immediately if booking is already paid
     let booking = await Booking.findById(bookingId);
     if (!booking) return;
+
+    // If already paid, exit
     if (booking.isPaid) {
       console.log("Booking already paid. Seats are safe.");
       return;
     }
 
-    // Wait 10 minutes
-    const tenMinutesLater = new Date(Date.now() + 10 * 60 * 1000);
-    await step.sleepUntil("wait-for-10-minutes", tenMinutesLater);
+    const maxChecks = 10; // total 10 minutes
+    const intervalMs = 60 * 1000; // 1 minute
+    let paid = false;
 
-    // Check payment status after wait
-    booking = await Booking.findById(bookingId);
-    if (!booking) return;
+    for (let i = 0; i < maxChecks; i++) {
+      await step.sleep(intervalMs); // wait 1 minute
 
-    if (!booking.isPaid) {
+      booking = await Booking.findById(bookingId);
+      if (!booking) break;
+
+      if (booking.isPaid) {
+        console.log(`Booking ${bookingId} paid after ${i + 1} minute(s).`);
+        paid = true;
+        break;
+      }
+    }
+
+    if (!paid && booking) {
       const show = await Show.findById(booking.show);
       booking.bookedSeats.forEach((seat) => delete show.occupiedSeats[seat]);
       show.markModified("occupiedSeats");
       await show.save();
       await Booking.findByIdAndDelete(booking._id);
       console.log(`Booking ${bookingId} canceled due to non-payment.`);
-    } else {
-      console.log(
-        `Booking ${bookingId} paid before 10 minutes. No action needed.`,
-      );
+    } else if (paid) {
+      console.log(`Booking ${bookingId} paid. No action needed.`);
     }
   },
 );
