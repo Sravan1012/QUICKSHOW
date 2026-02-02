@@ -77,13 +77,34 @@ npm run dev
 ![Home Page](Home.png)
 
 ### Movie Details Page
-![Movie Details](screenshots/movies-now.png)
+![Movie Details](movies-now.png)
+
+### Date Selection Page
+![Date Selection](date-selection.png)
 
 ### Seat Selection Page
-![Seat Selection](screenshots/seatlayout.png)
+![Seat Selection](seatlayout.png)
+
+### Payment
+![Payment](payment.png)
 
 ### Booking Confirmation Page
-![Booking Confirmation](screenshots/my-bookings.png)
+![Booking Confirmation](my-bookings.png)
+
+### Profile
+![Profile](profile.png)
+
+### Admin Dashboard
+![Admin Dashboard](admin-dashboard.png)
+
+### Add Shows
+![Add Shows](admin-addshows.png)
+
+### List Shows
+![List Shows](admin-list-shows.png)
+
+### List Bookings
+![List Bookings](admin-list-bookings.png)
 
 
 ---
