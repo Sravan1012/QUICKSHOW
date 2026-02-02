@@ -40,25 +40,33 @@ It allows users to browse movies, view details, select seats, and book tickets w
 
 > Copy-paste the following script in your terminal to set up the project locally:
 
-```bash
 # 1️⃣ Clone your repo
+```bash
 git clone https://github.com/Sravan1012/QUICKSHOW.git
+```
 
 # 2️⃣ Move into the project directory
+```bash
 cd QUICKSHOW
+```
 
 # 3️⃣ Install dependencies
+```bash
 npm install
+```
 
 # 4️⃣ Create a .env file with placeholder variables
+```bash
 cat <<EOL > .env
 VITE_CURRENCY=₹
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 VITE_TMDB_API_KEY=your_tmdb_api_key
 VITE_TMDB_IMAGE_BASE_URL=https://image.tmdb.org/t/p/original
 EOL
+```
 
 # 5️⃣ Start the development server
+```bash
 npm run dev
 ```
 ---
