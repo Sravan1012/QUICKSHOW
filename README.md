@@ -76,8 +76,11 @@ npm run dev
 ### Home Page
 ![Home Page](Home.png)
 
+### Movies Now
+![Movies Now](movies-now.png)
+
 ### Movie Details Page
-![Movie Details](movies-now.png)
+![Movie Details](movies-details.png)
 
 ### Date Selection Page
 ![Date Selection](date-selection.png)
