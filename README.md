@@ -3,8 +3,6 @@
 QuickShow is a modern **movie ticket booking web application** built using **React** and **Tailwind CSS**.  
 It allows users to browse movies, view details, select seats, and book tickets with secure authentication.
 
-This project was built by following **GreatStack**, with integrations and enhancements to resemble a real-world ticket booking platform.
-
 ---
 
 ## 🚀 Features
