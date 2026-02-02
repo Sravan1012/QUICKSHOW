@@ -80,7 +80,7 @@ npm run dev
 ![Movies Now](movies-now.png)
 
 ### Movie Details Page
-![Movie Details](movies-details.png)
+![Movie Details](movie-details.png)
 
 ### Date Selection Page
 ![Date Selection](date-selection.png)
