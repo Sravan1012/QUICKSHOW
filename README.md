@@ -77,15 +77,14 @@ npm run dev
 ![Home Page](screenshots/home.png)
 
 ### Movie Details Page
-![Movie Details](screenshots/details.png)
+![Movie Details](screenshots/movies-now.png)
 
 ### Seat Selection Page
-![Seat Selection](screenshots/seat.png)
+![Seat Selection](screenshots/seatlayout.png)
 
 ### Booking Confirmation Page
-![Booking Confirmation](screenshots/confirmation.png)
+![Booking Confirmation](screenshots/my-bookings.png)
 
-> 💡 Save your screenshots in a folder called `screenshots` in the project root.
 
 ---
 
