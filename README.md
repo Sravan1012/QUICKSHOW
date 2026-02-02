@@ -119,13 +119,6 @@ npm run dev
 - Learned booking system workflows and seat management
 - Deployed a production-ready app using Vercel
 
----
-
-## 🙌 Credits
-
-- Tutorial and guidance by **GreatStack**
-- Movie data provided by **TMDB**
-- Developed by **Sravan Krishna Prasad**
 
 ---
 
