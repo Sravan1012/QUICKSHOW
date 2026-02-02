@@ -62,5 +62,58 @@ EOL
 
 # 5️⃣ Start the development server
 npm run dev
+```
+---
+
+## 🌐 Live Demo
+
+🔗 [QuickShow Live](https://quickshow-three-sigma.vercel.app)
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Movie Details Page
+![Movie Details](screenshots/details.png)
+
+### Seat Selection Page
+![Seat Selection](screenshots/seat.png)
+
+### Booking Confirmation Page
+![Booking Confirmation](screenshots/confirmation.png)
+
+> 💡 Save your screenshots in a folder called `screenshots` in the project root.
+
+---
+
+## 📚 Learning Outcomes
+
+- Built a real-world React application
+- Styled responsive UI using Tailwind CSS
+- Integrated third-party APIs (TMDB)
+- Implemented authentication using Clerk
+- Learned booking system workflows and seat management
+- Deployed a production-ready app using Vercel
+
+---
+
+## 🙌 Credits
+
+- Tutorial and guidance by **GreatStack**
+- Movie data provided by **TMDB**
+- Developed by **Sravan Krishna Prasad**
+
+---
+
+## 📬 Contact
+
+- GitHub: [Sravan1012](https://github.com/Sravan1012)
+
+---
+
+⭐ If you like this project, don’t forget to star the repository!
 
 
