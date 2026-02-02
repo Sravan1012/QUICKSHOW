@@ -74,7 +74,7 @@ npm run dev
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](QUICKSHOW/home.png)
 
 ### Movie Details Page
 ![Movie Details](screenshots/movies-now.png)
