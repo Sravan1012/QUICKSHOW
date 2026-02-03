@@ -134,8 +134,5 @@ npm run dev
 
 - GitHub: [Sravan1012](https://github.com/Sravan1012)
 
----
-
-⭐ If you like this project, don’t forget to star the repository!
 
 
